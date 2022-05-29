@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "5727441970",
+    "project_id": "postest-7-fariz",
+    "storage_bucket": "postest-7-fariz.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:5727441970:android:0756b9c584f2a8fa59582b",
+        "android_client_info": {
+          "package_name": "com.example.postest7_farizfahrian_1915026033"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "5727441970-tle9f83ujq81kspe6c3gn2jd756174qu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2c1Bx5dlBJ0WBZ2Wy-ONGun5aNI7oEv4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "5727441970-tle9f83ujq81kspe6c3gn2jd756174qu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

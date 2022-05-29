@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:postest7_farizfahrian_1915026033/page/checkout.dart';
 import 'package:postest7_farizfahrian_1915026033/page/profile_page.dart';
+import 'package:postest7_farizfahrian_1915026033/page/cart_page.dart';
 import 'package:postest7_farizfahrian_1915026033/theme.dart';
 
 class HomePage extends StatefulWidget {
@@ -15,7 +16,7 @@ class _HomePageState extends State<HomePage> {
 
   List<Widget> pages = <Widget>[
     LandingPage(),
-    LandingPage(),
+    CartPage(),
     ProfilePage(),
   ];
   @override
@@ -25,13 +26,16 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _index,
         onTap: (int index) {
-          setState(() {
-            _index = index;
-          });
+          setState(
+            () {
+              _index = index;
+            },
+          );
         },
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.search), label: "Search"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.shopping_cart), label: "Cart"),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
         ],
       ),
@@ -139,14 +143,6 @@ class LandingPage extends StatelessWidget {
         ),
       ),
     ]);
-    floatingActionButton:
-    FloatingActionButton(
-      onPressed: () {
-        // Add your onPressed code here!
-      },
-      backgroundColor: Colors.blue,
-      child: const Icon(Icons.shopping_cart),
-    );
   }
 }
 
@@ -174,11 +170,11 @@ class ProductList extends StatelessWidget {
                 padding: EdgeInsets.all(10),
               ),
               const Text(
-                "TERREX URBAN LOW",
+                "Ultra 4D 5 Shoes",
                 style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
               ),
               Image.asset(
-                "assets/images/image_shoes.png",
+                "assets/images/image_shoes2.png",
               ),
               const Text(
                 "Rp2.000.000",
@@ -228,11 +224,11 @@ class ProductList2 extends StatelessWidget {
                   padding: EdgeInsets.all(10),
                 ),
                 Text(
-                  "TERREX URBAN LOW",
+                  "Ultra 4D 5 Shoes",
                   style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                 ),
                 Image.asset(
-                  "assets/images/image_shoes3.png",
+                  "assets/images/image_shoes2.png",
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 30),

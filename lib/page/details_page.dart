@@ -1,4 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:postest7_farizfahrian_1915026033/theme.dart';
 
@@ -19,6 +20,9 @@ class _DetailsPageState extends State<DetailsPage> {
 
   @override
   Widget build(BuildContext context) {
+    FirebaseFirestore firestore = FirebaseFirestore.instance;
+    CollectionReference carts = firestore.collection("carts");
+
     Widget indicator(int index) {
       return Container(
         margin: EdgeInsets.symmetric(horizontal: 2),
@@ -170,7 +174,18 @@ class _DetailsPageState extends State<DetailsPage> {
               child: Container(
                 height: 54,
                 child: OutlinedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    carts.add(
+                      {
+                        'name': 'Ultra 4D 5 Shoes',
+                        'price': 2000000,
+                        'imgUrl': 'assets/images/image_shoes2.png'
+                      },
+                    );
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                        backgroundColor: successColor,
+                        content: Text('Telah ditambahkan ke keranjang')));
+                  },
                   child: Text("Tambah ke Keranjang"),
                   style: TextButton.styleFrom(
                     primary: primaryColor,
